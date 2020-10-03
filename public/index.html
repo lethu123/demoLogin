@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/assets/images/icons/logo_not_border.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/assets/images/icons/logo_not_border.svg"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900"  type="text/css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grandstander:400,300,600,800,900"
+          type="text/css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Fonts to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+    <!-- Icons to support Material Design -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+
+    <!--
+        manifest.json provides metadata used when your web app is installed on a
+        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+      -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+    <title>hspace.net</title>
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/style.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/night-mode.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/framework.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/css.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/custom.css">
+    <!-- icons
+      ================================================== -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/icons.css">
+
+    <!-- Google font
+      ================================================== -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stMulishylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Grandstander:300,400,600,700" rel="stylesheet">
+
+
+    <style>
+        #main_header {
+            box-shadow: none !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+
+
+<!-- javaScripts
+            ================================================== -->
+<script src="%PUBLIC_URL%/assets/js/framework.js"></script>
+<script src="%PUBLIC_URL%/assets/js/jquery-3.3.1.min.js"></script>
+<script src="%PUBLIC_URL%/assets/js/bootstrap.min.js"></script>
+<script src="%PUBLIC_URL%/assets/js/simplebar.js"></script>
+<script src="%PUBLIC_URL%/assets/js/main.js"></script>
+<script src="%PUBLIC_URL%/assets/js/a076d05399.js"></script>
+<script src="%PUBLIC_URL%/assets/js/config.js"></script>
+<script src="%PUBLIC_URL%/assets/js/sweetalert2@9.js"></script>
+
+<!-- For Night mode -->
+<script>
+    (function (window, document) {
+        'use strict';
+        if (!('localStorage' in window)) return;
+        var nightMode = localStorage.getItem('gmtNightMode');
+        if (nightMode) {
+            document.documentElement.className += ' night-mode';
+        }
+    })(window, document);
+
+
+    (function (window, document) {
+
+        'use strict';
+
+        // Feature test
+        if (!('localStorage' in window)) return;
+
+        // Get our newly insert toggle
+        var nightMode = document.querySelector('#night-mode');
+        if (!nightMode) return;
+        // When clicked, toggle night mode on or off
+        nightMode.addEventListener('click', function (event) {
+
+            event.preventDefault();
+            document.documentElement.classList.toggle('night-mode');
+            if (document.documentElement.classList.contains('night-mode')) {
+                localStorage.setItem('gmtNightMode', true);
+                return;
+            }
+            localStorage.removeItem('gmtNightMode');
+        }, false);
+
+    })(window, document);
+</script>
+
+</body>
+
+</html>
