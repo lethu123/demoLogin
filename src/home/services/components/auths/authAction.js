@@ -21,7 +21,7 @@ export const login = (data, history, remember) => dispatch => {
         };
         is_auth = true;
         dispatch(setCurrentUser(res.data.user_url));
-        history.push('/');
+        history.push('/demoLogin');
 
     }).catch(error => {
         console.log('ERROR_LOGIN', error);
@@ -64,5 +64,5 @@ export const log_out = () => {
 
 const clearLocalStorage = () => {
     window.localStorage.clear();
-    window.location.href = '/login';
+    window.location.href = '/demoLogin/login';
 }
