@@ -1,0 +1,1 @@
+(this["webpackJsonphinnox.com"]=this["webpackJsonphinnox.com"]||[]).push([[5],{100:function(n,e,t){"use strict";t.r(e);var a=t(0),c=t.n(a);e.default=function(n){return c.a.createElement("div",{id:"wrapper"},c.a.createElement("div",{className:"main_content"},n.children))}}}]);
